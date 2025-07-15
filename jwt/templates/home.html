@@ -1,0 +1,161 @@
+<<<<<<< HEAD
+{% extends 'base.html' %} {% block title %}Home{% endblock %} {% block content%}
+<div class="jumbotron">
+  <h1 class="display-4">JWT Authentication Demo</h1>
+  <p class="lead">
+    This application demonstrates JSON Web Token (JWT) authentication in Django.
+  </p>
+  <hr class="my-4" />
+
+  {% if user.is_authenticated %}
+  <p>You are logged in as <strong>{{ user.username }}</strong>.</p>
+  <p>Visit your profile to view your JWT tokens and usage history.</p>
+  <a class="btn btn-primary btn-lg" href="{% url 'profile' %}" role="button"
+    >View Profile</a
+  >
+  {% else %}
+  <p>Please sign up or log in to see JWT authentication in action.</p>
+  <div class="d-flex gap-2">
+    <a class="btn btn-primary btn-lg" href="{% url 'signup' %}" role="button"
+      >Sign Up</a
+    >
+    <a
+      class="btn btn-outline-primary btn-lg"
+      href="{% url 'login' %}"
+      role="button"
+      >Login</a
+    >
+  </div>
+  {% endif %}
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>What is JWT?</h4>
+      </div>
+      <div class="card-body">
+        <p>
+          JWT (JSON Web Token) is a compact, URL-safe means of representing
+          claims between two parties.
+        </p>
+        <p>
+          It's commonly used for authentication and authorization in web
+          applications.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>How It Works</h4>
+      </div>
+      <div class="card-body">
+        <p>1. User logs in with credentials</p>
+        <p>2. Server validates credentials and issues a signed JWT</p>
+        <p>3. Client stores the JWT and includes it in subsequent requests</p>
+        <p>4. Server validates the JWT signature to authenticate the user</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>JWT Structure</h4>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>Header:</strong> Contains token type and signing algorithm
+        </p>
+        <p><strong>Payload:</strong> Contains claims (user data, expiration)</p>
+        <p>
+          <strong>Signature:</strong> Verifies the token hasn't been altered
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+=======
+{% extends 'base.html' %} {% block title %}Home{% endblock %} {% block content%}
+<div class="jumbotron">
+  <h1 class="display-4">JWT Authentication Demo</h1>
+  <p class="lead">
+    This application demonstrates JSON Web Token (JWT) authentication in Django.
+  </p>
+  <hr class="my-4" />
+
+  {% if user.is_authenticated %}
+  <p>You are logged in as <strong>{{ user.username }}</strong>.</p>
+  <p>Visit your profile to view your JWT tokens and usage history.</p>
+  <a class="btn btn-primary btn-lg" href="{% url 'profile' %}" role="button"
+    >View Profile</a
+  >
+  {% else %}
+  <p>Please sign up or log in to see JWT authentication in action.</p>
+  <div class="d-flex gap-2">
+    <a class="btn btn-primary btn-lg" href="{% url 'signup' %}" role="button"
+      >Sign Up</a
+    >
+    <a
+      class="btn btn-outline-primary btn-lg"
+      href="{% url 'login' %}"
+      role="button"
+      >Login</a
+    >
+  </div>
+  {% endif %}
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>What is JWT?</h4>
+      </div>
+      <div class="card-body">
+        <p>
+          JWT (JSON Web Token) is a compact, URL-safe means of representing
+          claims between two parties.
+        </p>
+        <p>
+          It's commonly used for authentication and authorization in web
+          applications.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>How It Works</h4>
+      </div>
+      <div class="card-body">
+        <p>1. User logs in with credentials</p>
+        <p>2. Server validates credentials and issues a signed JWT</p>
+        <p>3. Client stores the JWT and includes it in subsequent requests</p>
+        <p>4. Server validates the JWT signature to authenticate the user</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4">
+      <div class="card-header">
+        <h4>JWT Structure</h4>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>Header:</strong> Contains token type and signing algorithm
+        </p>
+        <p><strong>Payload:</strong> Contains claims (user data, expiration)</p>
+        <p>
+          <strong>Signature:</strong> Verifies the token hasn't been altered
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+>>>>>>> 1d2a47fef390eff824b3bc7cf2ea9d7e421b8492

@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %} {% block title %}Create New Entry -
+Wiki{% endblock %} {% block body %}
+<h1>Create a New Entry</h1>
+<form method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" required />
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea
+      class="form-control"
+      id="content"
+      name="content"
+      rows="6"
+      required
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Save Entry</button>
+</form>
+
+{% if error %}
+<div class="alert alert-danger mt-3">{{ error }}</div>
+{% endif %}
+
+<a href="{% url 'index' %}" class="btn btn-secondary mt-3">Cancel</a>
+{% endblock %}

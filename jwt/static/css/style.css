@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+/* Custom styles for JWT Authentication app */
+.jumbotron {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 1px;
+  margin-bottom: 2px;
+}
+
+.token-box {
+  font-family: monospace;
+  word-break: break-all;
+}
+=======
+/* Custom styles for JWT Authentication app */
+.jumbotron {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 1px;
+  margin-bottom: 2px;
+}
+
+.token-box {
+  font-family: monospace;
+  word-break: break-all;
+}
+>>>>>>> 1d2a47fef390eff824b3bc7cf2ea9d7e421b8492

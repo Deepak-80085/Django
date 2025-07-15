@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ title }} | Hello Flask</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+  </head>
+  <body>
+    <header><h1>Hello Flask</h1></header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>© 2025</footer>
+  </body>
+</html>
